@@ -27,8 +27,8 @@ const contactLinks = [
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/zain-abbas",
-    href: "https://linkedin.com/in/zain-abbas",
+    value: "linkedin.com/in/muhammad-zain-abbas",
+    href: "https://www.linkedin.com/in/muhammad-zain-abbas-1a0b87307?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     icon: Link,
   },
 ];

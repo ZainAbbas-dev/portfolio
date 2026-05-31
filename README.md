@@ -102,4 +102,4 @@ Full Stack Developer | MERN - Next.js - Python - AI Integration
 
 - Email: [iamzainabbass@gmail.com](mailto:iamzainabbass@gmail.com)
 - GitHub: [github.com/ZainAbbas-dev](https://github.com/ZainAbbas-dev)
-- LinkedIn: [linkedin.com/in/zain-abbas](https://linkedin.com/in/zain-abbas)
+- LinkedIn: [linkedin.com/in/muhammad-zain-abbas-1a0b87307](https://www.linkedin.com/in/muhammad-zain-abbas-1a0b87307?utm_source=share_via&utm_content=profile&utm_medium=member_android)
