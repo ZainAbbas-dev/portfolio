@@ -67,12 +67,26 @@ body {
 
 @layer components {
   .site-container {
+    position: relative;
+    z-index: 1;
     width: min(100% - 2rem, 76rem);
     margin-inline: auto;
   }
 
   .section-space {
+    position: relative;
     padding-block: clamp(4.5rem, 9vw, 8rem);
+  }
+
+  .section-space::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: min(84%, 62rem);
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(137, 157, 255, 0.2), transparent);
+    content: "";
+    transform: translateX(-50%);
   }
 
   .glass-card {
@@ -85,6 +99,7 @@ body {
       0 18px 60px rgba(0, 0, 0, 0.3),
       inset 0 1px 0 rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(22px);
+    transform-style: preserve-3d;
   }
 
   .glass-card-strong {
@@ -97,6 +112,7 @@ body {
       0 20px 70px rgba(42, 18, 112, 0.32),
       inset 0 1px 0 rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(24px);
+    transform-style: preserve-3d;
   }
 
   .glass-navbar {
@@ -253,7 +269,8 @@ body {
     inset: 3.1rem 3rem 4.5rem;
     overflow: hidden;
     padding: 1.35rem;
-    transform: perspective(900px) rotateY(-5deg) rotateX(2deg);
+    transform: perspective(1000px) rotateY(-7deg) rotateX(3deg) translateZ(0);
+    transform-style: preserve-3d;
   }
 
   .hero-profile-sheen {
@@ -262,6 +279,15 @@ body {
     background:
       linear-gradient(115deg, rgba(255, 255, 255, 0.14), transparent 33%),
       radial-gradient(circle at 75% 22%, rgba(117, 155, 255, 0.28), transparent 28%);
+  }
+
+  .hero-profile-card::after {
+    position: absolute;
+    inset: 0.45rem;
+    border: 1px solid rgba(199, 210, 255, 0.1);
+    border-radius: 1.15rem;
+    content: "";
+    pointer-events: none;
   }
 
   .hero-avatar {
@@ -299,12 +325,76 @@ body {
       0 24px 56px rgba(25, 9, 100, 0.54);
   }
 
+  .hero-platform::after {
+    position: absolute;
+    inset: 30% 9%;
+    border: 1px solid rgba(171, 142, 255, 0.5);
+    border-radius: 50%;
+    content: "";
+    box-shadow: 0 0 28px rgba(122, 83, 255, 0.4);
+  }
+
   .hero-orbit-glow {
     position: absolute;
     inset: 22% 12%;
     border-radius: 50%;
     background: rgba(119, 75, 255, 0.18);
     filter: blur(54px);
+  }
+
+  .hero-wire-orbit {
+    position: absolute;
+    border: 1px solid rgba(147, 172, 255, 0.18);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .hero-wire-orbit-one {
+    inset: 18% 4% 16%;
+    transform: rotate(-14deg);
+  }
+
+  .hero-wire-orbit-two {
+    inset: 27% 10% 22%;
+    border-color: rgba(182, 130, 255, 0.22);
+    transform: rotate(18deg);
+  }
+
+  .hero-floating-chip {
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    gap: 0.44rem;
+    border: 1px solid rgba(184, 198, 255, 0.16);
+    border-radius: 999px;
+    background: rgba(8, 13, 32, 0.7);
+    padding: 0.5rem 0.7rem;
+    color: #d9e0f5;
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.24);
+    backdrop-filter: blur(15px);
+    animation: chip-float 5s ease-in-out infinite;
+  }
+
+  .hero-floating-chip-left {
+    bottom: 23%;
+    left: 0;
+  }
+
+  .hero-floating-chip-right {
+    top: 19%;
+    right: 0;
+    animation-delay: -2.3s;
+  }
+
+  .hero-chip-dot {
+    height: 0.42rem;
+    width: 0.42rem;
+    border-radius: 50%;
+    box-shadow: 0 0 14px currentColor;
   }
 
   .project-card {
@@ -320,6 +410,7 @@ body {
       0 16px 44px rgba(0, 0, 0, 0.2),
       inset 0 1px 0 rgba(255, 255, 255, 0.06);
     backdrop-filter: blur(18px);
+    transform-style: preserve-3d;
     transition:
       border-color 220ms ease,
       box-shadow 220ms ease,
@@ -342,7 +433,7 @@ body {
     box-shadow:
       0 20px 54px rgba(12, 9, 48, 0.38),
       inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    transform: translateY(-5px);
+    transform: perspective(850px) translateY(-8px) rotateX(2deg) rotateY(-2deg);
   }
 
   .project-card:hover::after {
@@ -357,6 +448,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.11);
     border-radius: 1rem;
     background: rgba(8, 13, 32, 0.74);
+    transform: translateZ(20px);
   }
 
   .project-icon-violet {
@@ -438,6 +530,7 @@ body {
       0 14px 38px rgba(0, 0, 0, 0.18),
       inset 0 1px 0 rgba(255, 255, 255, 0.055);
     backdrop-filter: blur(16px);
+    transform-style: preserve-3d;
   }
 
   .skill-group-card {
@@ -470,7 +563,7 @@ body {
     box-shadow:
       0 16px 40px rgba(12, 9, 48, 0.32),
       inset 0 1px 0 rgba(255, 255, 255, 0.09);
-    transform: translateY(-4px);
+    transform: perspective(720px) translateY(-6px) rotateX(3deg);
   }
 
   .skill-icon {
@@ -510,6 +603,16 @@ body {
     padding: 0.85rem 0.6rem;
     text-align: center;
     backdrop-filter: blur(16px);
+    transition:
+      border-color 180ms ease,
+      box-shadow 180ms ease,
+      transform 180ms ease;
+  }
+
+  .about-stat:hover {
+    border-color: var(--border-highlight);
+    box-shadow: 0 14px 28px rgba(17, 9, 62, 0.26);
+    transform: translateY(-4px);
   }
 
   .about-stat strong {
@@ -565,6 +668,18 @@ body {
       0 16px 44px rgba(0, 0, 0, 0.19),
       inset 0 1px 0 rgba(255, 255, 255, 0.06);
     backdrop-filter: blur(18px);
+    transition:
+      border-color 200ms ease,
+      box-shadow 200ms ease,
+      transform 200ms ease;
+  }
+
+  .experience-card:hover {
+    border-color: var(--border-highlight);
+    box-shadow:
+      0 20px 52px rgba(12, 9, 48, 0.32),
+      inset 0 1px 0 rgba(255, 255, 255, 0.09);
+    transform: perspective(850px) translateY(-5px) rotateX(1.5deg);
   }
 
   .experience-card.compact {
@@ -594,6 +709,7 @@ body {
       0 22px 60px rgba(0, 0, 0, 0.25),
       inset 0 1px 0 rgba(255, 255, 255, 0.07);
     backdrop-filter: blur(20px);
+    transform-style: preserve-3d;
   }
 
   .contact-link-card {
@@ -696,11 +812,137 @@ body {
     color: #ffffff;
     transform: translateY(-2px);
   }
+
+  .ambient-scene {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .ambient-orb,
+  .ambient-ring {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .ambient-orb {
+    filter: blur(1px);
+    opacity: 0.65;
+  }
+
+  .ambient-orb-one {
+    top: 17%;
+    left: -4rem;
+    height: 12rem;
+    width: 12rem;
+    background: radial-gradient(circle at 32% 28%, rgba(142, 205, 255, 0.8), rgba(71, 81, 255, 0.22) 42%, transparent 70%);
+    animation: ambient-drift 15s ease-in-out infinite;
+  }
+
+  .ambient-orb-two {
+    top: 48%;
+    right: -6rem;
+    height: 17rem;
+    width: 17rem;
+    background: radial-gradient(circle at 35% 35%, rgba(195, 132, 255, 0.66), rgba(105, 54, 255, 0.15) 46%, transparent 72%);
+    animation: ambient-drift 18s ease-in-out -5s infinite reverse;
+  }
+
+  .ambient-orb-three {
+    bottom: 4%;
+    left: 18%;
+    height: 9rem;
+    width: 9rem;
+    background: radial-gradient(circle at 35% 35%, rgba(80, 220, 255, 0.48), rgba(22, 91, 209, 0.12) 48%, transparent 72%);
+    animation: ambient-drift 14s ease-in-out -2s infinite;
+  }
+
+  .ambient-ring {
+    border: 1px solid rgba(151, 125, 255, 0.12);
+  }
+
+  .ambient-ring-one {
+    top: 31%;
+    left: -9rem;
+    height: 24rem;
+    width: 24rem;
+    transform: rotateX(65deg);
+  }
+
+  .ambient-ring-two {
+    right: -12rem;
+    bottom: 12%;
+    height: 31rem;
+    width: 31rem;
+    border-color: rgba(92, 191, 255, 0.09);
+    transform: rotateX(68deg);
+  }
+
+  .perspective-grid {
+    position: absolute;
+    right: -12%;
+    bottom: -13rem;
+    left: -12%;
+    height: 31rem;
+    background-image:
+      linear-gradient(rgba(112, 132, 255, 0.11) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(112, 132, 255, 0.11) 1px, transparent 1px);
+    background-size: 62px 62px;
+    mask-image: linear-gradient(to bottom, transparent, black 36%, transparent 90%);
+    transform: perspective(480px) rotateX(63deg);
+    transform-origin: bottom;
+  }
+
+  .ambient-noise {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.13) 0.6px, transparent 0.6px);
+    background-size: 11px 11px;
+    opacity: 0.045;
+  }
+}
+
+@keyframes ambient-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(1.5rem, -2rem, 0) scale(1.08);
+  }
+}
+
+@keyframes chip-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
 }
 
 @media (max-width: 639px) {
   .hero-profile-card {
     inset: 3.75rem 1.25rem 4.4rem;
+  }
+
+  .hero-floating-chip-left {
+    left: 0.35rem;
+  }
+
+  .hero-floating-chip-right {
+    right: 0.35rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-orb,
+  .hero-floating-chip {
+    animation: none;
   }
 }
 

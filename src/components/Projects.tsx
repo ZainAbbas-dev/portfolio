@@ -1,4 +1,4 @@
-import { Sparkles } from "lucide-react";
+import { ArrowUpRight, Sparkles } from "lucide-react";
 import { ProjectCard } from "@/components/ProjectCard";
 import { projects } from "@/data/projects";
 import { MotionItem, MotionReveal, MotionStagger } from "@/components/Motion";
@@ -30,7 +30,7 @@ export function Projects() {
           target="_blank"
         >
           View GitHub profile
-          <span aria-hidden="true">↗</span>
+          <ArrowUpRight aria-hidden="true" size={15} />
         </a>
       </MotionReveal>
 

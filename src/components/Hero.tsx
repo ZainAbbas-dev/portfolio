@@ -56,6 +56,8 @@ export function Hero() {
           <HeroCanvas />
 
           <div className="hero-orbit-glow" />
+          <div className="hero-wire-orbit hero-wire-orbit-one" />
+          <div className="hero-wire-orbit hero-wire-orbit-two" />
           <div className="hero-profile-card glass-card-strong">
             <div className="hero-profile-sheen" />
             <div className="relative z-10 flex h-full flex-col justify-between">
@@ -92,6 +94,14 @@ export function Hero() {
             </div>
           </div>
 
+          <div className="hero-floating-chip hero-floating-chip-left">
+            <span className="hero-chip-dot bg-accent-cyan" />
+            AI Integration
+          </div>
+          <div className="hero-floating-chip hero-floating-chip-right">
+            <span className="hero-chip-dot bg-violet-300" />
+            Full Stack
+          </div>
           <div className="hero-platform" />
         </MotionHero>
       </div>
