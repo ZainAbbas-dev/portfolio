@@ -4,7 +4,7 @@ import { MotionItem, MotionReveal, MotionStagger } from "@/components/Motion";
 const educationHighlights = [
   "BS Computer Science",
   "COMSATS University Islamabad",
-  "Expected Graduation: 2027",
+  "Graduation: 2027",
   "CGPA: 3.40 / 4.00",
 ];
 
