@@ -1,17 +1,16 @@
 "use client";
-
 import { Canvas } from "@react-three/fiber";
-import { FloatingShapes } from "@/components/3d/FloatingShapes";
+import { DeveloperScene } from "./DeveloperScene";
+import { Suspense } from "react";
 
-export function HeroCanvas() {
+export const HeroCanvas = () => {
   return (
-    <div className="pointer-events-none absolute inset-0">
-      <Canvas camera={{ position: [0, 0, 7], fov: 44 }} dpr={[1, 1.5]}>
-        <ambientLight intensity={0.8} />
-        <pointLight color="#a66cff" intensity={16} position={[3, 4, 5]} />
-        <pointLight color="#72e8ff" intensity={10} position={[-4, -2, 3]} />
-        <FloatingShapes />
+    <div className="absolute inset-0 z-0 h-screen w-full pointer-events-none">
+      <Canvas camera={{ position: [0, 0, 10], fov: 45 }}>
+        <Suspense fallback={null}>
+          <DeveloperScene />
+        </Suspense>
       </Canvas>
     </div>
   );
-}
+};

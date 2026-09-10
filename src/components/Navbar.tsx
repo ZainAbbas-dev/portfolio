@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import { useState } from "react";
 
@@ -11,7 +11,7 @@ const navItems = [
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
-];
+]; //[cite: 12]
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,66 +20,50 @@ export function Navbar() {
   return (
     <motion.header
       animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-      className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6"
-      initial={reduceMotion ? false : { opacity: 0, y: -18 }}
-      transition={{ duration: 0.62, ease: [0.22, 1, 0.36, 1] }}
+      className="fixed inset-x-0 top-0 z-50 px-6 pt-6"
+      initial={reduceMotion ? false : { opacity: 0, y: -20 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      <nav
-        aria-label="Main navigation"
-        className="site-container glass-navbar relative flex min-h-16 items-center justify-between px-4 sm:px-6"
-      >
-        <a
-          aria-label="Muhammad Zain Abbas home"
-          className="gradient-text text-xl font-bold tracking-tight sm:text-2xl"
-          href="#home"
-          onClick={() => setIsMenuOpen(false)}
-        >
-          MZA
+      <nav aria-label="Main navigation" className="flex items-center justify-between max-w-7xl mx-auto">
+        {/* Minimal Logo matching the dark aesthetic */}
+        <a href="#home" onClick={() => setIsMenuOpen(false)} className="text-white font-mono text-xl font-bold tracking-widest hover:text-accent-cool transition-colors">
+          MZA.
         </a>
 
-        <div className="hidden items-center gap-1 lg:flex">
+        {/* Minimalist Desktop Links */}
+        <div className="hidden lg:flex items-center gap-8">
           {navItems.map((item) => (
-            <a className="nav-link" href={item.href} key={item.href}>
+            <a 
+              key={item.href} 
+              href={item.href} 
+              className="text-xs font-mono font-semibold uppercase tracking-[0.2em] text-muted hover:text-white transition-colors"
+            >
               {item.label}
             </a>
           ))}
         </div>
 
-        <a className="connect-button hidden sm:flex" href="#contact">
-          Let&apos;s Connect
-          <ArrowUpRight aria-hidden="true" size={16} strokeWidth={2} />
-        </a>
-
+        {/* Mobile Toggle */}
         <button
-          aria-expanded={isMenuOpen}
-          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
-          className="nav-menu-button lg:hidden"
-          onClick={() => setIsMenuOpen((isOpen) => !isOpen)}
-          type="button"
+          className="lg:hidden text-white"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
+        {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="mobile-nav-panel absolute inset-x-0 top-[calc(100%+0.75rem)] z-[60] overflow-hidden rounded-2xl border border-white/20 bg-[#050919]/98 p-2 shadow-2xl backdrop-blur-3xl lg:hidden">
+          <div className="absolute top-16 left-4 right-4 bg-[#0B0E14]/95 backdrop-blur-xl border border-white/10 p-6 rounded-2xl flex flex-col gap-6 lg:hidden shadow-2xl">
             {navItems.map((item) => (
               <a
-                className="mobile-nav-link"
-                href={item.href}
                 key={item.href}
+                href={item.href}
+                className="text-sm font-mono font-semibold uppercase tracking-[0.2em] text-white"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
               </a>
             ))}
-            <a
-              className="connect-button mt-2 flex justify-center sm:hidden"
-              href="#contact"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Let&apos;s Connect
-              <ArrowUpRight aria-hidden="true" size={16} strokeWidth={2} />
-            </a>
           </div>
         )}
       </nav>
