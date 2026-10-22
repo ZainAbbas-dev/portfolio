@@ -1,12 +1,12 @@
 import {
   Bot,
+  Boxes,
   BrainCircuit,
   Braces,
   Cable,
   Code2,
   Database,
   Eye,
-  FileCode2,
   FlaskConical,
   Layers3,
   ScanFace,
@@ -14,6 +14,7 @@ import {
   Server,
   Sparkles,
   Video,
+  Wind,
   Zap,
   type LucideIcon,
 } from "lucide-react";
@@ -28,8 +29,7 @@ export type Skill = {
 export const skills: Skill[] = [
   { name: "Next.js", category: "Frontend", icon: Layers3, accent: "violet" },
   { name: "React", category: "Frontend", icon: Code2, accent: "cyan" },
-  { name: "HTML5", category: "Frontend", icon: FileCode2, accent: "blue" },
-  { name: "CSS3", category: "Frontend", icon: Braces, accent: "violet" },
+  { name: "Tailwind CSS", category: "Frontend", icon: Wind, accent: "blue" },
   { name: "Node.js", category: "Backend", icon: Server, accent: "emerald" },
   { name: "Express.js", category: "Backend", icon: Cable, accent: "blue" },
   { name: "Python", category: "Backend", icon: Braces, accent: "blue" },
@@ -41,6 +41,7 @@ export const skills: Skill[] = [
     icon: Database,
     accent: "blue",
   },
+  { name: "Prisma ORM", category: "Database", icon: Boxes, accent: "violet" },
   {
     name: "MongoDB",
     category: "Database",

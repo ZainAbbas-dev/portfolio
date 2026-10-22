@@ -7,7 +7,7 @@ const educationHighlights = [
   "BS Computer Science",
   "COMSATS University Islamabad",
   "Graduation: 2027",
-  "CGPA: 3.50 / 4.00",
+  "CGPA: 3.51 / 4.00",
 ];
 
 export function Experience() {
@@ -25,7 +25,7 @@ export function Experience() {
             <span className="text-[#C97D4C]">EXPERIENCE</span>
           </h2>
           <p className="mt-8 max-w-2xl text-lg text-muted font-medium leading-relaxed">
-            Building a strong academic foundation while applying it through shipped products, professional certificates, and developer community involvement.
+            A strong academic foundation, applied through shipped products, professional certifications, and active involvement in the developer community.
           </p>
         </div>
 
@@ -55,7 +55,7 @@ export function Experience() {
 
               <p className="text-xl font-medium text-accent-warm mb-6">COMSATS University Islamabad</p>
               <p className="text-muted leading-relaxed text-lg mb-10">
-                Currently in the final year, focused on full-stack software engineering and practical AI integration alongside coursework in algorithms, databases, networks, and computer vision.
+                Final-year student focusing on full-stack software engineering and applied AI, with coursework in algorithms, databases, computer networks, and computer vision.
               </p>
 
               <div className="flex flex-wrap gap-3">
@@ -78,9 +78,9 @@ export function Experience() {
               className="group border border-white/10 bg-[#121620]/80 p-8 rounded-3xl hover:bg-[#121620] hover:border-white/20 transition-colors"
             >
               <Award aria-hidden="true" size={28} className="text-[#C97D4C] mb-6" />
-              <h3 className="text-xl font-bold text-white uppercase mb-3">Professional Certificates</h3>
+              <h3 className="text-xl font-bold text-white uppercase mb-3">Professional Certifications</h3>
               <p className="text-muted leading-relaxed">
-                Meta Front-End Developer and Google IT Automation with Python professional certificates through Coursera.
+                Meta Front-End Developer and Google IT Automation with Python, both professional certificates from Coursera.
               </p>
             </motion.div>
 
@@ -94,7 +94,7 @@ export function Experience() {
               <UsersRound aria-hidden="true" size={28} className="text-[#4FD9C7] mb-6" />
               <h3 className="text-xl font-bold text-white uppercase mb-3">Developer Community</h3>
               <p className="text-muted leading-relaxed">
-                Active volunteer with GDGoC COMSATS and IEEE Society, supporting technical workshops, developer sessions, and student events.
+                Active volunteer with GDGoC COMSATS and the IEEE Society, helping run technical workshops, developer sessions, and student events.
               </p>
             </motion.div>
 

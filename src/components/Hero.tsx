@@ -45,7 +45,7 @@ export const Hero = () => {
             className="mt-10 pointer-events-auto"
           >
             <p className="max-w-xl text-lg md:text-xl text-muted font-medium leading-relaxed">
-              I don&apos;t just study software — I ship it. Specializing in Next.js, Python, and AI integration to build impactful digital platforms.
+              I don&apos;t just study software — I ship it. I build full-stack web platforms with Next.js and Python, and integrate AI where it adds real value.
             </p>
           </motion.div>
 

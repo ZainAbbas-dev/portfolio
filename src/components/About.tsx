@@ -29,7 +29,7 @@ export function About() {
         <div className="border-b border-white/10 pb-12 mb-16">
           <p className="eyebrow text-accent-cool mb-4">ABOUT ME</p>
           <h2 className="text-[8vw] md:text-[6vw] font-black leading-[0.9] tracking-tighter text-white uppercase">
-            I&apos;m a <span className="text-accent-warm">selectively skilled</span> <br/>
+            I&apos;m a <span className="text-accent-warm">product-focused</span> <br/>
             full-stack developer.
           </h2>
         </div>
@@ -52,7 +52,7 @@ export function About() {
             </div>
 
             <p className="text-xl md:text-2xl font-medium text-gray-300 leading-relaxed">
-              I am a Computer Science student at COMSATS University Islamabad building production-minded applications across web, real-time communication, and applied AI. My work combines strong engineering foundations with a bias toward useful, deployable products.
+              I&apos;m a final-year Computer Science student at COMSATS University Islamabad. I design, build, and deploy full-stack applications across the web, real-time communication, and applied AI, from an AI-assisted legal marketplace to an encrypted messaging platform with WebRTC calls.
             </p>
           </div>
 
@@ -67,11 +67,11 @@ export function About() {
               </div>
               <div>
                 <p className="text-accent-cool font-mono text-xs font-bold tracking-widest uppercase mb-2">CGPA</p>
-                <p className="text-3xl sm:text-5xl font-black text-white">3.50</p>
+                <p className="text-3xl sm:text-5xl font-black text-white">3.51</p>
               </div>
               <div>
-                <p className="text-accent-cool font-mono text-xs font-bold tracking-widest uppercase mb-2">Semester</p>
-                <p className="text-3xl sm:text-5xl font-black text-white">Final Year</p>
+                <p className="text-accent-cool font-mono text-xs font-bold tracking-widest uppercase mb-2">Year</p>
+                <p className="text-3xl sm:text-5xl font-black text-white">Final</p>
               </div>
             </div>
 

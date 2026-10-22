@@ -38,7 +38,7 @@ export function Contact() {
               <span className="text-accent-warm">LET&apos;S TALK.</span>
             </h2>
             <p className="text-lg text-muted font-medium leading-relaxed mb-10 max-w-md">
-              I am open to software engineering and AI internship opportunities, product collaborations, and conversations about building useful technology.
+              I&apos;m open to software engineering and AI internship roles, product collaborations, and conversations about building useful technology.
             </p>
 
             <div className="flex items-center gap-3 text-sm font-mono text-slate-300 mb-12">

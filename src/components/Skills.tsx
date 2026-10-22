@@ -76,7 +76,7 @@ export function Skills() {
                   rotateY: -5,
                 }}
                 style={{ transformStyle: "preserve-3d" }}
-                className="group relative flex flex-col items-center justify-center gap-4 border border-white/5 bg-[#121620]/50 p-6 rounded-2xl hover:bg-[#121620] hover:border-white/20 transition-all cursor-crosshair shadow-lg"
+                className="group relative flex flex-col items-center justify-center gap-4 border border-white/5 bg-[#121620]/50 p-6 rounded-2xl hover:bg-[#121620] hover:border-white/20 transition-all shadow-lg"
               >
                 <div className="text-white/60 group-hover:text-accent-cool transition-colors duration-300 transform group-hover:translate-z-[20px]">
                   <Icon aria-hidden="true" size={32} strokeWidth={1.5} />
