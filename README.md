@@ -17,6 +17,7 @@ my experience across Next.js, TypeScript, Node.js, Python, and applied AI.
 
 - Responsive dark glassmorphism interface
 - Animated hero section with an interactive 3D scene
+- 3D portrait that rotates 360° and zooms smoothly (drag, pinch, or buttons)
 - Featured project cards with live application links
 - Full-stack, database, AI, and real-time technology showcase
 - Internship experience, education, certifications, and developer community
