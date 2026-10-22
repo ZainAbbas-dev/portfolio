@@ -1,16 +1,16 @@
 "use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { HeroCanvas } from "./3d/HeroCanvas";
+import { HeroPortrait } from "./HeroPortrait";
 
 export const Hero = () => {
   return (
-    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden pt-28 pb-16 lg:py-0">
       {/* Interactive 3D Background specifically for Hero */}
       <HeroCanvas />
 
       {/* Typography & Image Overlay */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center pointer-events-none">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center pointer-events-none">
         
         {/* Left Column: Typography */}
         <div className="flex flex-col items-start justify-center">
@@ -65,33 +65,14 @@ export const Hero = () => {
           </motion.div>
         </div>
 
-        {/* Right Column: Profile Image */}
+        {/* Right Column: 3D Profile Portrait (shown on all screen sizes) */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="relative hidden lg:block w-full max-w-lg mx-auto pointer-events-auto group"
+          className="relative order-first lg:order-none w-full pointer-events-auto"
         >
-          {/* Subtle glow effect behind image on hover */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-[#C97D4C]/20 to-[#4FD9C7]/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-          
-          {/* CSS Mask: Image ko bottom se fade karne ke liye */}
-          <div 
-            className="relative z-10 w-full"
-            style={{ 
-              maskImage: 'linear-gradient(to bottom, black 65%, transparent 100%)', 
-              WebkitMaskImage: 'linear-gradient(to bottom, black 65%, transparent 100%)' 
-            }}
-          >
-            <Image
-              src="/images/hero-profile.png"
-              alt="Muhammad Zain Abbas"
-              width={600}
-              height={600}
-              priority
-              className="w-full h-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out drop-shadow-[0_0_30px_rgba(0,0,0,0.8)]"
-            />
-          </div>
+          <HeroPortrait />
         </motion.div>
 
       </div>

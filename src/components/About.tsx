@@ -1,7 +1,6 @@
 "use client";
 import { BrainCircuit, Code2, Rocket } from "lucide-react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 const highlights = [
   {
@@ -38,7 +37,7 @@ export function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Left Column: Image and Philosophy */}
           <div>
-            <div className="relative group overflow-hidden rounded-2xl border border-white/10 bg-[#121620] mb-10">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#121620] mb-10">
               {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#0B0E14] via-transparent to-transparent z-10 opacity-80 pointer-events-none" />
               
@@ -47,8 +46,8 @@ export function About() {
                 src="/images/zain-profile-transparent.png"
                 width={600}
                 height={600}
-                
-                className="w-full h-auto object-cover opacity-25 saturate-[0.8] brightness-90 group-hover:opacity-90 transition-all duration-700 ease-in-out"
+                sizes="(min-width: 1024px) 600px, 100vw"
+                className="w-full h-auto object-cover"
               />
             </div>
             
@@ -61,18 +60,18 @@ export function About() {
           <div className="space-y-16">
             
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 border-b border-white/10 pb-16">
+            <div className="grid grid-cols-3 gap-4 sm:gap-6 border-b border-white/10 pb-16">
               <div>
                 <p className="text-accent-cool font-mono text-xs font-bold tracking-widest uppercase mb-2">Live Products</p>
-                <p className="text-5xl font-black text-white">2+</p>
+                <p className="text-3xl sm:text-5xl font-black text-white">2+</p>
               </div>
               <div>
                 <p className="text-accent-cool font-mono text-xs font-bold tracking-widest uppercase mb-2">CGPA</p>
-                <p className="text-5xl font-black text-white">3.50</p>
+                <p className="text-3xl sm:text-5xl font-black text-white">3.50</p>
               </div>
               <div>
                 <p className="text-accent-cool font-mono text-xs font-bold tracking-widest uppercase mb-2">Semester</p>
-                <p className="text-5xl font-black text-white">Final Year</p>
+                <p className="text-3xl sm:text-5xl font-black text-white">Final Year</p>
               </div> {/*[cite: 5] */}
             </div>
 

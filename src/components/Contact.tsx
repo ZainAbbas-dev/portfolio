@@ -57,16 +57,16 @@ export function Contact() {
                     target={link.href.startsWith("http") ? "_blank" : undefined}
                     className="group flex items-center justify-between border border-white/10 bg-[#121620] p-4 rounded-2xl hover:border-white/30 hover:bg-[#121620]/80 transition-all max-w-md"
                   > {/*[cite: 7] */}
-                    <div className="flex items-center gap-4">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#0B0E14] text-[#C97D4C]">
+                    <div className="flex min-w-0 items-center gap-4">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#0B0E14] text-[#C97D4C]">
                         <Icon size={20} /> {/*[cite: 7] */}
                       </div>
-                      <div>
+                      <div className="min-w-0">
                         <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-slate-500">{link.label}</p> {/*[cite: 7] */}
-                        <p className="text-sm font-medium text-slate-200">{link.value}</p> {/*[cite: 7] */}
+                        <p className="text-sm font-medium text-slate-200 break-all">{link.value}</p> {/*[cite: 7] */}
                       </div>
                     </div>
-                    <ArrowUpRight size={18} className="text-slate-500 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" /> {/*[cite: 7] */}
+                    <ArrowUpRight size={18} className="shrink-0 text-slate-500 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" /> {/*[cite: 7] */}
                   </a>
                 );
               })}
@@ -82,7 +82,7 @@ export function Contact() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="border border-white/10 bg-[#121620] p-10 rounded-3xl shadow-2xl relative overflow-hidden h-fit"
+            className="border border-white/10 bg-[#121620] p-6 sm:p-10 rounded-3xl shadow-2xl relative overflow-hidden h-fit"
           >
             <form className="relative z-10 flex flex-col gap-8" onSubmit={handleSubmit}>
               
