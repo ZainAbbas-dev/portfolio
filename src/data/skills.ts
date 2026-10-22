@@ -1,17 +1,24 @@
 import {
-  Bot,
   Boxes,
   BrainCircuit,
   Braces,
   Cable,
+  ChartScatter,
   Code2,
+  Container,
+  Cpu,
   Database,
   Eye,
+  FileCode2,
+  Flame,
   FlaskConical,
   Layers3,
-  ScanFace,
   Radio,
+  ScanFace,
+  ScanSearch,
   Server,
+  Smartphone,
+  Smile,
   Sparkles,
   Video,
   Wind,
@@ -21,86 +28,57 @@ import {
 
 export type Skill = {
   name: string;
-  category: "Frontend" | "Backend" | "Database" | "AI / Real-Time";
+  category: "Frontend" | "Backend & Real-Time" | "Data & DevOps" | "AI / ML";
   icon: LucideIcon;
   accent: "violet" | "blue" | "cyan" | "emerald";
 };
 
 export const skills: Skill[] = [
+  { name: "TypeScript", category: "Frontend", icon: FileCode2, accent: "blue" },
   { name: "Next.js", category: "Frontend", icon: Layers3, accent: "violet" },
   { name: "React", category: "Frontend", icon: Code2, accent: "cyan" },
   { name: "Tailwind CSS", category: "Frontend", icon: Wind, accent: "blue" },
-  { name: "Node.js", category: "Backend", icon: Server, accent: "emerald" },
-  { name: "Express.js", category: "Backend", icon: Cable, accent: "blue" },
-  { name: "Python", category: "Backend", icon: Braces, accent: "blue" },
-  { name: "FastAPI", category: "Backend", icon: Zap, accent: "emerald" },
-  { name: "Flask", category: "Backend", icon: FlaskConical, accent: "cyan" },
-  {
-    name: "PostgreSQL",
-    category: "Database",
-    icon: Database,
-    accent: "blue",
-  },
-  { name: "Prisma ORM", category: "Database", icon: Boxes, accent: "violet" },
-  {
-    name: "MongoDB",
-    category: "Database",
-    icon: Database,
-    accent: "emerald",
-  },
-  {
-    name: "Socket.io",
-    category: "AI / Real-Time",
-    icon: Radio,
-    accent: "violet",
-  },
-  { name: "WebRTC", category: "AI / Real-Time", icon: Video, accent: "cyan" },
-  { name: "OpenCV", category: "AI / Real-Time", icon: Eye, accent: "emerald" },
-  {
-    name: "DeepFace",
-    category: "AI / Real-Time",
-    icon: ScanFace,
-    accent: "cyan",
-  },
-  {
-    name: "TensorFlow Lite",
-    category: "AI / Real-Time",
-    icon: BrainCircuit,
-    accent: "violet",
-  },
-  {
-    name: "Haar Cascade",
-    category: "AI / Real-Time",
-    icon: ScanFace,
-    accent: "blue",
-  },
-  {
-    name: "Gemini API",
-    category: "AI / Real-Time",
-    icon: Bot,
-    accent: "violet",
-  },
+  { name: "Flutter", category: "Frontend", icon: Smartphone, accent: "cyan" },
+  { name: "Node.js", category: "Backend & Real-Time", icon: Server, accent: "emerald" },
+  { name: "Express.js", category: "Backend & Real-Time", icon: Cable, accent: "blue" },
+  { name: "Python", category: "Backend & Real-Time", icon: Braces, accent: "blue" },
+  { name: "FastAPI", category: "Backend & Real-Time", icon: Zap, accent: "emerald" },
+  { name: "Flask", category: "Backend & Real-Time", icon: FlaskConical, accent: "cyan" },
+  { name: "Socket.io", category: "Backend & Real-Time", icon: Radio, accent: "violet" },
+  { name: "WebRTC", category: "Backend & Real-Time", icon: Video, accent: "cyan" },
+  { name: "PostgreSQL", category: "Data & DevOps", icon: Database, accent: "blue" },
+  { name: "Prisma ORM", category: "Data & DevOps", icon: Boxes, accent: "violet" },
+  { name: "MongoDB", category: "Data & DevOps", icon: Database, accent: "emerald" },
+  { name: "Docker", category: "Data & DevOps", icon: Container, accent: "blue" },
+  { name: "PyTorch", category: "AI / ML", icon: Flame, accent: "violet" },
+  { name: "scikit-learn", category: "AI / ML", icon: ChartScatter, accent: "blue" },
+  { name: "Hugging Face", category: "AI / ML", icon: Smile, accent: "emerald" },
+  { name: "YOLOv8", category: "AI / ML", icon: ScanSearch, accent: "cyan" },
+  { name: "OpenCV", category: "AI / ML", icon: Eye, accent: "emerald" },
+  { name: "DeepFace", category: "AI / ML", icon: ScanFace, accent: "cyan" },
+  { name: "TensorFlow Lite", category: "AI / ML", icon: BrainCircuit, accent: "violet" },
+  { name: "ONNX Runtime", category: "AI / ML", icon: Cpu, accent: "blue" },
 ];
 
 export const skillGroups = [
   {
     title: "Frontend",
-    description: "Responsive interfaces and production-ready web experiences.",
+    description: "Type-safe, responsive web and mobile interfaces built for production.",
     icon: Sparkles,
   },
   {
-    title: "Backend",
-    description: "Scalable APIs, authentication, and application architecture.",
+    title: "Backend & Real-Time",
+    description: "REST APIs, authentication, and live features with Socket.io and WebRTC.",
     icon: Server,
   },
   {
-    title: "Database",
-    description: "Structured and document data for real-world products.",
+    title: "Data & DevOps",
+    description: "Relational and document data modeling, containerized and deployed.",
     icon: Database,
   },
   {
-    title: "AI / Real-Time",
-    description: "Intelligent features and live collaborative systems.",
-    icon: Radio,
+    title: "AI / ML",
+    description: "Training, serving, and deploying models from the cloud to the device.",
+    icon: BrainCircuit,
   },
 ] as const;

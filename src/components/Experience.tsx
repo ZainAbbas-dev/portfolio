@@ -1,6 +1,6 @@
 "use client";
 
-import { Award, GraduationCap, UsersRound } from "lucide-react";
+import { Award, Briefcase, GraduationCap, UsersRound } from "lucide-react";
 import { motion } from "framer-motion";
 
 const educationHighlights = [
@@ -10,6 +10,14 @@ const educationHighlights = [
   "CGPA: 3.51 / 4.00",
 ];
 
+const internshipHighlights = [
+  "Merged 7 code-reviewed pull requests covering 27 tasks across SEO, backend APIs, and an admin dashboard.",
+  "Built admin queues for verifications, reports, and partners, plus ops analytics and a live audit timeline.",
+  "Implemented SEO structured data, page metadata, and security headers, plus health and waitlist stats APIs.",
+];
+
+const internshipStack = ["Next.js", "TypeScript", "React", "Node.js", "Express.js", "REST APIs"];
+
 export function Experience() {
   return (
     <section className="relative w-full bg-[#0B0E14] py-32 z-10" id="experience">
@@ -18,16 +26,57 @@ export function Experience() {
         {/* Massive Section Header */}
         <div className="border-b border-white/10 pb-12 mb-16">
           <p className="eyebrow text-accent-cool mb-4 uppercase tracking-[0.2em] font-mono font-bold text-sm">
-            Learning & Growth
+            Experience & Education
           </p>
           <h2 className="text-[8vw] md:text-[6vw] font-black leading-[0.85] tracking-tighter text-white uppercase">
-            EDUCATION & <br />
-            <span className="text-[#C97D4C]">EXPERIENCE</span>
+            EXPERIENCE & <br />
+            <span className="text-[#C97D4C]">EDUCATION</span>
           </h2>
           <p className="mt-8 max-w-2xl text-lg text-muted font-medium leading-relaxed">
-            A strong academic foundation, applied through shipped products, professional certifications, and active involvement in the developer community.
+            Industry experience shipping live product features, built on a strong academic foundation and active involvement in the developer community.
           </p>
         </div>
+
+        {/* Internship */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="group relative overflow-hidden border border-white/10 bg-gradient-to-br from-[#121620] to-[#0B0E14] p-6 sm:p-10 rounded-3xl shadow-2xl mb-6 hover:border-white/20 transition-colors"
+        >
+          <div className="absolute inset-0 bg-gradient-to-tr from-accent-cool/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+          <div className="relative z-10 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+            <div>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#0B0E14] border border-white/10 text-white">
+                  <Briefcase aria-hidden="true" size={30} />
+                </div>
+                <div>
+                  <p className="font-mono text-xs font-bold uppercase tracking-widest text-accent-cool mb-1">Jul 2026 / Sep 2026</p>
+                  <h3 className="text-2xl font-bold tracking-tight text-white uppercase">Web Developer Intern</h3>
+                </div>
+              </div>
+              <p className="text-xl font-medium text-accent-warm mb-6">Hoop Interactive</p>
+              <div className="flex flex-wrap gap-3">
+                {internshipStack.map((item) => (
+                  <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-mono font-medium text-gray-300" key={item}>
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <ul className="space-y-5">
+              {internshipHighlights.map((item) => (
+                <li className="flex gap-4 text-muted leading-relaxed text-lg" key={item}>
+                  <span aria-hidden="true" className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-cool" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </motion.div>
 
         <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
 
@@ -38,7 +87,7 @@ export function Experience() {
             viewport={{ once: true }}
             whileHover={{ scale: 1.02, rotateY: 2, rotateX: 2 }}
             style={{ transformStyle: "preserve-3d" }}
-            className="group relative overflow-hidden border border-white/10 bg-gradient-to-br from-[#121620] to-[#0B0E14] p-10 rounded-3xl shadow-2xl transition-all"
+            className="group relative overflow-hidden border border-white/10 bg-gradient-to-br from-[#121620] to-[#0B0E14] p-6 sm:p-10 rounded-3xl shadow-2xl transition-all"
           >
             <div className="absolute inset-0 bg-gradient-to-tr from-accent-warm/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -78,9 +127,9 @@ export function Experience() {
               className="group border border-white/10 bg-[#121620]/80 p-8 rounded-3xl hover:bg-[#121620] hover:border-white/20 transition-colors"
             >
               <Award aria-hidden="true" size={28} className="text-[#C97D4C] mb-6" />
-              <h3 className="text-xl font-bold text-white uppercase mb-3">Professional Certifications</h3>
+              <h3 className="text-xl font-bold text-white uppercase mb-3">Professional Certification</h3>
               <p className="text-muted leading-relaxed">
-                Meta Front-End Developer and Google IT Automation with Python, both professional certificates from Coursera.
+                Meta Full Stack Developer professional certificate from Coursera.
               </p>
             </motion.div>
 

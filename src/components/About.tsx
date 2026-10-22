@@ -10,7 +10,7 @@ const highlights = [
   },
   {
     title: "INTEGRATE INTELLIGENCE",
-    description: "I use AI where it adds real value, from case categorization to computer vision workflows.",
+    description: "I use AI where it adds real value, from on-device health risk models to computer vision APIs.",
     icon: BrainCircuit,
   },
   {
@@ -52,7 +52,7 @@ export function About() {
             </div>
 
             <p className="text-xl md:text-2xl font-medium text-gray-300 leading-relaxed">
-              I&apos;m a final-year Computer Science student at COMSATS University Islamabad. I design, build, and deploy full-stack applications across the web, real-time communication, and applied AI, from an AI-assisted legal marketplace to an encrypted messaging platform with WebRTC calls.
+              I&apos;m a final-year Computer Science student at COMSATS University Islamabad with internship experience shipping live product features in Next.js and TypeScript. I build and deploy real-time web applications with Node.js, PostgreSQL, Socket.io, and WebRTC, and serve AI models through Python and FastAPI.
             </p>
           </div>
 
@@ -63,7 +63,7 @@ export function About() {
             <div className="grid grid-cols-3 gap-4 sm:gap-6 border-b border-white/10 pb-16">
               <div>
                 <p className="text-accent-cool font-mono text-xs font-bold tracking-widest uppercase mb-2">Live Products</p>
-                <p className="text-3xl sm:text-5xl font-black text-white">2+</p>
+                <p className="text-3xl sm:text-5xl font-black text-white">3</p>
               </div>
               <div>
                 <p className="text-accent-cool font-mono text-xs font-bold tracking-widest uppercase mb-2">CGPA</p>

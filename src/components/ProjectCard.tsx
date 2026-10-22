@@ -47,7 +47,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-      className="relative group w-full perspective-[1000px]"
+      className="relative group w-full h-full perspective-[1000px]"
     >
       <article className="relative h-full flex flex-col justify-between overflow-hidden border border-white/10 rounded-2xl bg-gradient-to-br from-[#121620] to-[#0B0E14] p-8 shadow-2xl transition-colors duration-300 group-hover:border-white/30">
 
@@ -81,7 +81,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             <h3 className="text-3xl font-bold tracking-tight text-white font-sans uppercase">
               {project.title}
             </h3>
-            <p className="mt-4 text-base leading-relaxed text-muted line-clamp-3">
+            <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted">
               {project.description}
             </p>
           </div>

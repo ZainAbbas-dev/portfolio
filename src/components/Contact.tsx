@@ -38,7 +38,7 @@ export function Contact() {
               <span className="text-accent-warm">LET&apos;S TALK.</span>
             </h2>
             <p className="text-lg text-muted font-medium leading-relaxed mb-10 max-w-md">
-              I&apos;m open to software engineering and AI internship roles, product collaborations, and conversations about building useful technology.
+              I&apos;m open to Associate Software Engineer roles, product collaborations, and conversations about building useful technology.
             </p>
 
             <div className="flex items-center gap-3 text-sm font-mono text-slate-300 mb-12">
@@ -72,7 +72,7 @@ export function Contact() {
               })}
             </div>
 
-            <a className="inline-flex items-center gap-3 px-8 py-4 bg-[#121620] border border-white/10 hover:border-accent-warm text-white font-bold rounded-2xl transition-colors uppercase tracking-widest text-xs font-mono" download href="/images/resume.pdf">
+            <a className="inline-flex items-center gap-3 px-8 py-4 bg-[#121620] border border-white/10 hover:border-accent-warm text-white font-bold rounded-2xl transition-colors uppercase tracking-widest text-xs font-mono" download="Muhammad_Zain_Abbas_Resume.pdf" href="/images/resume.pdf">
               Download Resume <Download size={18} />
             </a>
           </div>

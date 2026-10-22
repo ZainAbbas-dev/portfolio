@@ -33,7 +33,7 @@ export function Projects() {
         </div>
 
         {/* 3D Interactive Grid */}
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-2">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -41,6 +41,7 @@ export function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
+              className={project.featured ? "md:col-span-2" : undefined}
             >
               <ProjectCard project={project} />
             </motion.div>

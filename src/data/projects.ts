@@ -1,4 +1,4 @@
-import { Eye, ScanFace, Scale, ShieldCheck, type LucideIcon } from "lucide-react";
+import { Eye, HeartPulse, ScanFace, Scale, ShieldCheck, type LucideIcon } from "lucide-react";
 
 export type Project = {
   title: string;
@@ -9,24 +9,35 @@ export type Project = {
   accent: "violet" | "blue" | "cyan" | "emerald";
   liveUrl?: string;
   repoUrl?: string;
+  featured?: boolean;
 };
 
 export const projects: Project[] = [
   {
-    title: "CaseRoute",
-    category: "AI-Powered Legal Tech",
+    title: "MediQore",
+    category: "Final Year Project · AI HealthTech",
     description:
-      "A full-stack legal marketplace with AI case categorization, lawyer-client matchmaking, secure documents, real-time chat, and role-based workflows.",
-    stack: ["Next.js", "PostgreSQL", "Prisma", "Socket.io"],
+      "An AI-assisted, offline-first health platform for Lady Health Workers: a Flutter Android app and React web portal with AES-256 encrypted offline storage, conflict-aware UUID sync, and on-device ONNX risk models trained with scikit-learn.",
+    stack: ["Flutter", "Node.js", "PostgreSQL", "React", "scikit-learn", "ONNX Runtime"],
+    icon: HeartPulse,
+    accent: "emerald",
+    featured: true,
+  },
+  {
+    title: "CaseRoute",
+    category: "Legal Tech Marketplace",
+    description:
+      "A legal marketplace with 27 REST API endpoints, JWT-secured dashboards for three user roles, a weighted lawyer-matching algorithm, and real-time chat on a dedicated Socket.io server.",
+    stack: ["Next.js", "Express.js", "PostgreSQL", "Prisma", "Socket.io"],
     icon: Scale,
     accent: "violet",
     liveUrl: "https://case-route.vercel.app/",
   },
   {
     title: "Nexus Secure Chat",
-    category: "Encrypted Communication",
+    category: "Real-Time Communication",
     description:
-      "A production messaging platform with AES-256 encryption, scam detection, trust scoring, WebRTC calls, live coding, and a shared whiteboard.",
+      "A real-time communication platform with WebRTC audio/video calls, AES-encrypted rooms, phishing detection with a 4-tier trust score, a shared whiteboard, and a live Monaco code editor.",
     stack: ["React", "WebRTC", "Socket.io", "PostgreSQL"],
     icon: ShieldCheck,
     accent: "blue",
@@ -34,12 +45,13 @@ export const projects: Project[] = [
   },
   {
     title: "Multimodal Vision Engine",
-    category: "AI / Computer Vision",
+    category: "Computer Vision REST API",
     description:
-      "An AI engine designed to process multimodal inputs for richer visual understanding, analysis, and intelligent application workflows.",
-    stack: ["Python", "FastAPI", "OpenCV", "AI Models"],
+      "A FastAPI service serving ViLT for visual question answering, Donut for receipt parsing, and YOLOv8 for object detection, containerized with Docker on Hugging Face Spaces.",
+    stack: ["Python", "FastAPI", "PyTorch", "YOLOv8", "Docker"],
     icon: Eye,
     accent: "cyan",
+    liveUrl: "https://multimodal-vision-engine.vercel.app/",
   },
   {
     title: "Face Recognition Attendance",

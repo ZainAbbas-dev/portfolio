@@ -11,7 +11,7 @@ integration.
 This portfolio presents my featured projects, technical skills, education,
 professional certificates, and contact details in a polished responsive
 interface. It is designed to give recruiters and collaborators a clear view of
-my experience across the MERN ecosystem, Next.js, Python, and applied AI.
+my experience across Next.js, TypeScript, Node.js, Python, and applied AI.
 
 ## Highlights
 
@@ -19,28 +19,33 @@ my experience across the MERN ecosystem, Next.js, Python, and applied AI.
 - Animated hero section with an interactive 3D scene
 - Featured project cards with live application links
 - Full-stack, database, AI, and real-time technology showcase
-- About, education, certifications, and developer community sections
+- Internship experience, education, certifications, and developer community
 - Downloadable resume
 - Contact form with a prefilled email workflow
 - Accessible reduced-motion support
 
 ## Featured Projects
 
+### MediQore (Final Year Project)
+
+AI-assisted, offline-first health platform for Lady Health Workers: a Flutter
+Android app and React web portal with encrypted offline storage, conflict-aware
+sync, and on-device ONNX risk models.
+
 ### CaseRoute
 
-AI-powered legal technology marketplace with case categorization,
-lawyer-client matchmaking, secure document management, role-based workflows,
-and real-time chat.
+Legal tech marketplace with 27 REST API endpoints, JWT-secured dashboards for
+three user roles, a weighted lawyer-matching algorithm, and real-time chat.
 
 ### Nexus Secure Chat
 
-Encrypted communication platform with AES-256 messaging, scam detection,
-trust scoring, WebRTC calls, collaborative coding, and a shared whiteboard.
+Real-time communication platform with WebRTC calls, AES-encrypted rooms,
+phishing detection, trust scoring, a shared whiteboard, and live coding.
 
 ### Multimodal Vision Engine
 
-AI engine for multimodal input processing, visual understanding, and
-intelligent application workflows.
+FastAPI service serving ViLT, Donut, and YOLOv8 models for visual question
+answering, receipt parsing, and object detection, deployed with Docker.
 
 ### Face Recognition Attendance System
 
@@ -98,7 +103,7 @@ portfolio does not require environment variables.
 
 **Muhammad Zain Abbas**
 
-Full Stack Developer | MERN - Next.js - Python - AI Integration
+Full Stack Developer | Next.js - TypeScript - Node.js - PostgreSQL - Python - AI Integration
 
 - Email: [iamzainabbass@gmail.com](mailto:iamzainabbass@gmail.com)
 - GitHub: [github.com/ZainAbbas-dev](https://github.com/ZainAbbas-dev)
