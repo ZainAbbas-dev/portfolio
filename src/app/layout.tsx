@@ -12,10 +12,26 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
+const siteTitle = "Muhammad Zain Abbas | Full Stack Developer";
+const siteDescription =
+  "Portfolio of Muhammad Zain Abbas, a full stack developer focused on modern web platforms and AI integration.";
+
 export const metadata: Metadata = {
-  title: "Muhammad Zain Abbas | Full Stack Developer",
-  description:
-    "Portfolio of Muhammad Zain Abbas, a full stack developer focused on modern web platforms and AI integration.",
+  metadataBase: new URL("https://portfolio-gilt-pi-66.vercel.app"),
+  title: siteTitle,
+  description: siteDescription,
+  openGraph: {
+    type: "website",
+    url: "/",
+    title: siteTitle,
+    description: siteDescription,
+    siteName: "Muhammad Zain Abbas",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+  },
 };
 
 export default function RootLayout({

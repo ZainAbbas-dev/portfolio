@@ -11,7 +11,7 @@ export const Hero = () => {
 
       {/* Typography & Image Overlay */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center pointer-events-none">
-        
+
         {/* Left Column: Typography */}
         <div className="flex flex-col items-start justify-center">
           <motion.div
@@ -48,7 +48,7 @@ export const Hero = () => {
               I don&apos;t just study software — I ship it. Specializing in Next.js, Python, and AI integration to build impactful digital platforms.
             </p>
           </motion.div>
-          
+
           {/* Call to action buttons */}
           <motion.div
              initial={{ opacity: 0, y: 20 }}

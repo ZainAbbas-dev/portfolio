@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import type { Project } from "@/data/projects"; //[cite: 13]
+import type { Project } from "@/data/projects";
 
 type ProjectCardProps = {
   project: Project;
@@ -50,7 +50,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       className="relative group w-full perspective-[1000px]"
     >
       <article className="relative h-full flex flex-col justify-between overflow-hidden border border-white/10 rounded-2xl bg-gradient-to-br from-[#121620] to-[#0B0E14] p-8 shadow-2xl transition-colors duration-300 group-hover:border-white/30">
-        
+
         {/* Background Glow Effect on Hover */}
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-tr from-accent-warm/10 via-transparent to-accent-cool/10 pointer-events-none" />
 

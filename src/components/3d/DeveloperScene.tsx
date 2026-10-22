@@ -14,7 +14,7 @@ export const DeveloperScene = () => {
     if (meshRef.current) {
       meshRef.current.rotation.x += 0.002;
       meshRef.current.rotation.y += 0.003;
-      
+
       // Parallax effect using custom hook
       meshRef.current.position.x = THREE.MathUtils.lerp(meshRef.current.position.x, mouse.x * 2, 0.05);
       meshRef.current.position.y = THREE.MathUtils.lerp(meshRef.current.position.y, mouse.y * 2, 0.05);

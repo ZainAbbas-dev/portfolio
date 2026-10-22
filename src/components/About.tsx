@@ -18,13 +18,13 @@ const highlights = [
     description: "My focus is delivery: deployed applications, secure architecture, and useful user experiences.",
     icon: Rocket,
   },
-]; //[cite: 5]
+];
 
 export function About() {
   return (
     <section className="relative w-full bg-[#0B0E14] py-32 z-10" id="about">
       <div className="max-w-7xl mx-auto px-6">
-        
+
         {/* Massive Section Header */}
         <div className="border-b border-white/10 pb-12 mb-16">
           <p className="eyebrow text-accent-cool mb-4">ABOUT ME</p>
@@ -40,7 +40,7 @@ export function About() {
             <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#121620] mb-10">
               {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#0B0E14] via-transparent to-transparent z-10 opacity-80 pointer-events-none" />
-              
+
               <Image
                 alt="Muhammad Zain Abbas"
                 src="/images/zain-profile-transparent.png"
@@ -50,7 +50,7 @@ export function About() {
                 className="w-full h-auto object-cover"
               />
             </div>
-            
+
             <p className="text-xl md:text-2xl font-medium text-gray-300 leading-relaxed">
               I am a Computer Science student at COMSATS University Islamabad building production-minded applications across web, real-time communication, and applied AI. My work combines strong engineering foundations with a bias toward useful, deployable products.
             </p>
@@ -58,7 +58,7 @@ export function About() {
 
           {/* Right Column: Stats & Highlights in brutalist style */}
           <div className="space-y-16">
-            
+
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 sm:gap-6 border-b border-white/10 pb-16">
               <div>
@@ -72,7 +72,7 @@ export function About() {
               <div>
                 <p className="text-accent-cool font-mono text-xs font-bold tracking-widest uppercase mb-2">Semester</p>
                 <p className="text-3xl sm:text-5xl font-black text-white">Final Year</p>
-              </div> {/*[cite: 5] */}
+              </div>
             </div>
 
             {/* How I Work */}

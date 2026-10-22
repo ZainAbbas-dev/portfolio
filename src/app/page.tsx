@@ -20,7 +20,7 @@ export default function Home() {
 
       {/* Main Content Wrapper - Removed overflow-hidden so the page can scroll naturally */}
       <main className="relative isolate min-h-screen bg-[#0B0E14] overflow-x-hidden text-white" id="home">
-        
+
         {/* Global Ambient Glows & Grid */}
         <AmbientScene />
 
@@ -32,7 +32,7 @@ export default function Home() {
         <Experience />
         <Contact />
       </main>
-      
+
       {/* Footer outside the main wrapper for proper layout */}
       <Footer />
     </>

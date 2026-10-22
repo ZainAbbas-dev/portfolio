@@ -1,14 +1,14 @@
 "use client";
 import { ArrowUpRight } from "lucide-react";
 import { ProjectCard } from "@/components/ProjectCard";
-import { projects } from "@/data/projects"; //[cite: 14]
+import { projects } from "@/data/projects";
 import { motion } from "framer-motion";
 
 export function Projects() {
   return (
     <section className="relative w-full bg-[#0B0E14] py-32 z-10" id="projects">
       <div className="max-w-7xl mx-auto px-6">
-        
+
         {/* Massive Header Section */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-white/10 pb-12 mb-16">
           <div>
